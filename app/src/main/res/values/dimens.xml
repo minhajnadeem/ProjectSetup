@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--app default-->
+    <dimen name="app_default_margin">16dp</dimen>
+    <dimen name="app_default_horizontal_margin_small">5dp</dimen>
+    <dimen name="app_default_vertical_margin_small">5dp</dimen>
+    <dimen name="app_default_horizontal_margin_medium">10dp</dimen>
+    <dimen name="app_default_vertical_margin_medium">10dp</dimen>
+
+    <dimen name="stroke_radius">10dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+
+    <!--text-->
+    <dimen name="text_size1">24sp</dimen>
+    <dimen name="text_size2">20sp</dimen>
+    <dimen name="text_size3">17sp</dimen> //app title
+    <dimen name="text_size4">15sp</dimen>
+    <dimen name="text_size5">13sp</dimen>
+    <dimen name="text_size6">12sp</dimen>
+
+    <!--dialog-->
+    <dimen name="dialog_default_padding">10dp</dimen>
+    <dimen name="dialog_cancel_size">24dp</dimen>
+    <dimen name="dialog_horizontal_margin">@dimen/app_default_margin</dimen>
+
+</resources>

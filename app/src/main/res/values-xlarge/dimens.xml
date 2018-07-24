@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //text
+    <dimen name="text_size1">24sp</dimen>
+    <dimen name="text_size2">20sp</dimen>
+    <dimen name="text_size3">17sp</dimen>
+    <dimen name="text_size4">15sp</dimen>
+    <dimen name="text_size5">13sp</dimen>
+    <dimen name="text_size6">12sp</dimen>
+
+    //dialog
+    <dimen name="dialog_default_padding">16dp</dimen>
+    <dimen name="dialog_cancel_size">48dp</dimen>
+    <dimen name="stroke_radius">5dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+
+</resources>
