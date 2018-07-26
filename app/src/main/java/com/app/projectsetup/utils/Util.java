@@ -2,7 +2,13 @@ package com.app.projectsetup.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.WindowManager;
+
+import com.app.projectsetup.MainActivity;
 
 /**
  * Created by minhaj nadeem on 22/07/2018.
@@ -15,7 +21,7 @@ public class Util {
         // Or for "sticky immersive," replace it with SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         View decorView = context.getWindow().getDecorView();
         int uiOptions =
-                //View.SYSTEM_UI_FLAG_IMMERSIVE |
+                View.SYSTEM_UI_FLAG_IMMERSIVE |
                 // Set the content to appear under the system bars so that the
                 // content doesn't resize when the system bars hide and show.
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
@@ -31,11 +37,38 @@ public class Util {
 
     // Shows the system bars by removing all the flags
     // except for the ones that make the content appear under the system bars.
-    private void showSystemUI(Activity context) {
+    public static void showSystemUI(Activity context) {
         View decorView = context.getWindow().getDecorView();
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+    }
+
+    /**
+     * device width
+     */
+    public static int getDeviceWidth(Activity context){
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        context.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        return displayMetrics.widthPixels;
+    }
+
+    /**
+     * device height
+     */
+    public static int getDeviceHeight(Activity activity){
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        return displayMetrics.heightPixels;
+    }
+
+    /**
+     * start HomeActivity. if activity instance exists in task then bring that task on foreground and handle intent in onNewIntent
+     */
+    public static void startHomeActivity(Activity activity, Bundle extras){
+        Intent intent = new Intent(activity, MainActivity.class);
+        intent.putExtras(extras);
+        activity.startActivity(intent);
     }
 }
