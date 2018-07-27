@@ -2,6 +2,7 @@ package com.app.projectsetup;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
@@ -23,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
         startAnimation(textView);
     }
 
-    private void startAnimation(TextView textView) {
+    private void startAnimation(View view) {
         TranslateAnimation translateAnimation =  new TranslateAnimation(0,0,Util.getDeviceHeight(this),0);
         translateAnimation.setDuration(1500);
         translateAnimation.setFillAfter(true);
@@ -47,6 +48,6 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         });
-        textView.startAnimation(translateAnimation);
+        view.startAnimation(translateAnimation);
     }
 }

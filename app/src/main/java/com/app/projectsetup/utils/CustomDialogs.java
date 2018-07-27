@@ -38,6 +38,7 @@ public class CustomDialogs {
             this(context,R.style.DialogStyle);
             mContext = context;
         }
+
         public MessageDialog(@NonNull Context context, int themeResId) {
             super(context, themeResId);
         }

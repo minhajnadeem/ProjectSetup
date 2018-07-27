@@ -5,10 +5,12 @@
     <dimen name="app_default_margin">16dp</dimen>
     <dimen name="app_default_horizontal_margin_small">5dp</dimen>
     <dimen name="app_default_vertical_margin_small">5dp</dimen>
-    <dimen name="app_default_horizontal_margin_medium">10dp</dimen>
-    <dimen name="app_default_vertical_margin_medium">10dp</dimen>
+    <dimen name="app_default_horizontal_margin_medium">8dp</dimen>
+    <dimen name="app_default_vertical_margin_medium">8dp</dimen>
+    <dimen name="app_default_horizontal_margin_large">10dp</dimen>
+    <dimen name="app_default_vertical_margin_large">10dp</dimen>
 
-    <dimen name="stroke_radius">10dp</dimen>
+    <dimen name="stroke_radius">5dp</dimen>
     <dimen name="stroke_width">2dp</dimen>
 
     <!--text-->

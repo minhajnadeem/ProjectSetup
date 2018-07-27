@@ -15,6 +15,35 @@ import com.app.projectsetup.MainActivity;
  */
 public class Util {
 
+    /**
+     * start HomeActivity. if activity instance exists in task then bring that task on foreground and handle intent in onNewIntent
+     */
+    public static void startHomeActivity(Activity activity, Bundle extras){
+        Intent intent = new Intent(activity, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtras(extras);
+        activity.startActivity(intent);
+    }
+
+    /**
+     *
+     * show any view
+     */
+    public static void showView(View view){
+        view.setVisibility(View.VISIBLE);
+    }
+    /**
+     *
+     * hide any view
+     */
+    public static void hideView(View view){
+        view.setVisibility(View.GONE);
+    }
+
+    /**
+     *
+     * hide system UI(nav bar and status bar) to enable full screen
+     */
     public static void hideSystemUI(Activity context) {
         // Enables regular immersive mode.
         // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
@@ -35,6 +64,10 @@ public class Util {
 
     }
 
+    /**
+     *
+     * show back system UI(nav bar and status bar)
+     */
     // Shows the system bars by removing all the flags
     // except for the ones that make the content appear under the system bars.
     public static void showSystemUI(Activity context) {
@@ -64,11 +97,15 @@ public class Util {
     }
 
     /**
-     * start HomeActivity. if activity instance exists in task then bring that task on foreground and handle intent in onNewIntent
+     * enable or disable view
      */
-    public static void startHomeActivity(Activity activity, Bundle extras){
-        Intent intent = new Intent(activity, MainActivity.class);
-        intent.putExtras(extras);
-        activity.startActivity(intent);
+    public static void setEnabled(View view,boolean enabled){
+        if (enabled){
+            view.setEnabled(enabled);
+            view.setAlpha(1f);
+        }else {
+            view.setEnabled(enabled);
+            view.setAlpha(0.5f);
+        }
     }
 }
